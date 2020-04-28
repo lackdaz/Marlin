@@ -1062,8 +1062,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200 // TODO: MAX X SIZE
-#define Y_BED_SIZE 200 // TODO: MAX Y SIZE
+#define X_BED_SIZE 100 // TODO: MAX X SIZE
+#define Y_BED_SIZE 50 // TODO: MAX Y SIZE
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1071,10 +1071,10 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 240
+#define Z_MAX_POS 50 // TODO: MAX Z SIZE
 #if ENABLED(E_AXIS_HOMING)
   #define E_MIN_POS 0
-  #define E_MAX_POS 100 // TODO: MAX E
+  #define E_MAX_POS 10 // TODO: MAX E SIZE
 #endif
 
 /**
