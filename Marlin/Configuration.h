@@ -654,8 +654,8 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -737,14 +737,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 } // TODO: STEPS_MM
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1600, 1600, 1600, 1259.842519685 } // TODO: STEPS_MM
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 } // TODO: MAX FEEDRATE
+#define DEFAULT_MAX_FEEDRATE          { 30, 30, 15, 5 } // TODO: MAX FEEDRATE
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -752,7 +752,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 } // TODO: MAX ACC
+#define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 50, 50 } // TODO: MAX ACC {3000, 3000, 100, 10000}
 
 /**
  * Default Acceleration (change/s) change = mm/s
