@@ -737,14 +737,15 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1600, 1600, 1600, 1259.842519685 } // TODO: STEPS_MM
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 1600, 1600, 1600, 1259.842519685 } // TODO: STEPS_MM
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 800, 800, 800, 629.92126 } // TODO: STEPS_MM
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 18, 18, 18, 5 } // TODO: MAX FEEDRATE
+#define DEFAULT_MAX_FEEDRATE          { 14, 14, 14, 5 } // TODO: MAX FEEDRATE
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -762,9 +763,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          100    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  100    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   100    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Junction Deviation
@@ -773,7 +774,7 @@
  *
  * See:
  *   https://reprap.org/forum/read.php?1,739819
- *   http://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
+ *   http://blog.kyneticcnc.com/2014/10/computing-junction-deviation-for-marlin.html
  */
 //#define JUNCTION_DEVIATION
 #if ENABLED(JUNCTION_DEVIATION)
@@ -968,9 +969,9 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
+// #define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
+// #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
+// #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
