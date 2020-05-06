@@ -738,14 +738,15 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 1600, 1600, 1600, 1259.842519685 } // TODO: STEPS_MM
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 800, 800, 800, 629.92126 } // TODO: STEPS_MM
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 800, 800, 800, 629.9212598425 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 400, 400, 400, 314.9606299213 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 14, 14, 14, 5 } // TODO: MAX FEEDRATE
+#define DEFAULT_MAX_FEEDRATE          { 40, 40, 40, 5 } // TODO: MAX FEEDRATE
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -1360,8 +1361,8 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (4*60)
+#define HOMING_FEEDRATE_XY (25*60) // TODO: HOMING SPEEDS
+#define HOMING_FEEDRATE_Z  (10*60)
 #if ENABLED(E_AXIS_HOMING)
   #define HOMING_FEEDRATE_E  (4*60)
 #endif
