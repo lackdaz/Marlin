@@ -622,6 +622,13 @@ void clean_up_after_endstop_or_probe_move() {
     #if !HAS_SOFTWARE_ENDSTOPS || ENABLED(MAX_SOFTWARE_ENDSTOP_Z)
       NOMORE(target[Z_AXIS], soft_endstop[Z_AXIS].max);
     #endif
+
+    #if !HAS_SOFTWARE_ENDSTOPS || ENABLED(MIN_SOFTWARE_ENDSTOP_E)
+      NOLESS(target[E_AXIS], soft_endstop[E_AXIS].min);
+    #endif
+    #if !HAS_SOFTWARE_ENDSTOPS || ENABLED(MAX_SOFTWARE_ENDSTOP_E)
+      NOMORE(target[E_AXIS], soft_endstop[E_AXIS].max);
+    #endif
   }
 
 #endif // HAS_SOFTWARE_ENDSTOPS
