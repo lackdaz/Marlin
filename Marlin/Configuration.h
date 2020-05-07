@@ -754,7 +754,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 40, 40, 40, 5 } // TODO: MAX ACC {3000, 3000, 100, 10000}
+#define DEFAULT_MAX_ACCELERATION      { 15, 15, 15, 5 } // TODO: MAX ACC {3000, 3000, 100, 10000}
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -791,8 +791,8 @@
  * value set here, it may happen instantaneously.
  */
 #if DISABLED(JUNCTION_DEVIATION)
-  #define DEFAULT_XJERK 10.0
-  #define DEFAULT_YJERK 10.0
+  #define DEFAULT_XJERK 5.0
+  #define DEFAULT_YJERK 5.0
   #define DEFAULT_ZJERK  0.3
 #endif
 
@@ -1064,8 +1064,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 100 // TODO: MAX X SIZE
-#define Y_BED_SIZE 50 // TODO: MAX Y SIZE
+#define X_BED_SIZE 95 // TODO: MAX X SIZE
+#define Y_BED_SIZE 45 // TODO: MAX Y SIZE
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1073,10 +1073,10 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 50 // TODO: MAX Z SIZE
+#define Z_MAX_POS 45 // TODO: MAX Z SIZE
 #if ENABLED(E_AXIS_HOMING)
   #define E_MIN_POS 0
-  #define E_MAX_POS 10 // TODO: MAX E SIZE
+  #define E_MAX_POS 8 // TODO: MAX E SIZE
 #endif
 
 /**
