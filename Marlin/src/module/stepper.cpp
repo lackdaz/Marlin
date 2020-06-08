@@ -2154,7 +2154,8 @@ void Stepper::init() {
   last_direction_bits = 0
     | (INVERT_X_DIR ? _BV(X_AXIS) : 0)
     | (INVERT_Y_DIR ? _BV(Y_AXIS) : 0)
-    | (INVERT_Z_DIR ? _BV(Z_AXIS) : 0);
+    | (INVERT_Z_DIR ? _BV(Z_AXIS) : 0)
+    | (INVERT_E_DIR ? _BV(E_AXIS) : 0);
 
   set_directions();
 

@@ -1032,6 +1032,7 @@
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
+#define INVERT_E_DIR false
 
 // @section extruder
 
@@ -1064,8 +1065,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 95 // TODO: MAX X SIZE
-#define Y_BED_SIZE 45 // TODO: MAX Y SIZE
+#define X_BED_SIZE 96 // TODO: MAX X SIZE
+#define Y_BED_SIZE 42 // TODO: MAX Y SIZE
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1073,10 +1074,10 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 45 // TODO: MAX Z SIZE
+#define Z_MAX_POS 46 // TODO: MAX Z SIZE
 #if ENABLED(E_AXIS_HOMING)
   #define E_MIN_POS 0
-  #define E_MAX_POS 8 // TODO: MAX E SIZE
+  #define E_MAX_POS 12 // TODO: MAX E SIZE
 #endif
 
 /**
