@@ -1057,7 +1057,7 @@
 // :[-1,1]
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR -1
+#define Z_HOME_DIR 1
 #if ENABLED(E_AXIS_HOMING)
   #define E_HOME_DIR -1
 #endif
@@ -1074,7 +1074,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 46 // TODO: MAX Z SIZE
+#define Z_MAX_POS 47 // TODO: MAX Z SIZE
 #if ENABLED(E_AXIS_HOMING)
   #define E_MIN_POS 0
   #define E_MAX_POS 12 // TODO: MAX E SIZE
